@@ -108,6 +108,9 @@ python run_ingestion.py
 
 # Run evaluation suite
 python eval/run_eval.py
+
+# Simulate a brand crisis spike
+python inject_spike.py
 ```
 
 ### API docs
