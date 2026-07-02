@@ -101,8 +101,8 @@ def run_evaluation():
             print(f"  ❌ ERROR: {e}")
             results.append({"id": case["id"], "status": "ERROR", "error": str(e)})
 
-        print("  [Waiting 30s to respect free-tier API rate limits...]")
-        time.sleep(30)
+        print("  [Waiting 65s to respect free-tier API rate limits...]")
+        time.sleep(65)
 
     pass_rate = (passed / total) * 100
     print(f"\n{'='*60}")
