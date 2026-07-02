@@ -2,7 +2,7 @@ from langchain.chat_models import init_chat_model
 from langgraph.prebuilt import create_react_agent
 from app.retrieval.hybrid_search import hybrid_search
 
-model = init_chat_model("google_genai:gemini-2.5-flash", temperature=0)
+model = init_chat_model("google_genai:gemini-2.0-flash", temperature=0)
 
 def retrieve_brand_content(brand: str, query: str) -> str:
     """Retrieve the most relevant recent content chunks about a brand."""
