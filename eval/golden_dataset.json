@@ -1,0 +1,74 @@
+[
+  {
+    "id": "sent-001",
+    "query": "What is the overall sentiment on Tesla right now?",
+    "brand": "Tesla",
+    "competitors": [],
+    "expected_behavior": "Should identify mixed or negative sentiment, cite specific sources, mention at least 2 themes",
+    "must_contain_concepts": ["sentiment", "source", "theme"],
+    "must_not_contain": ["I don't know", "no information", "cannot find"]
+  },
+  {
+    "id": "sent-002",
+    "query": "What are people saying about Tesla's self-driving technology?",
+    "brand": "Tesla",
+    "competitors": [],
+    "expected_behavior": "Should retrieve FSD-related content and analyze sentiment specifically around autonomous driving",
+    "must_contain_concepts": ["FSD", "self-driving", "autonomous"],
+    "must_not_contain": ["I don't know", "no information"]
+  },
+  {
+    "id": "sent-003",
+    "query": "What is the financial sentiment around Tesla?",
+    "brand": "Tesla",
+    "competitors": [],
+    "expected_behavior": "Should find financial news, mention stock or delivery estimates",
+    "must_contain_concepts": ["financial", "stock", "delivery", "market"],
+    "must_not_contain": ["I don't know"]
+  },
+  {
+    "id": "crisis-001",
+    "query": "Is there anything alarming happening with Tesla right now?",
+    "brand": "Tesla",
+    "competitors": [],
+    "expected_behavior": "Should call check_for_crisis, report spike ratio, not fabricate a crisis if none detected",
+    "must_contain_concepts": ["anomaly", "spike", "volume"],
+    "must_not_contain": ["crisis detected", "emergency"]
+  },
+  {
+    "id": "comp-001",
+    "query": "How does Tesla compare to Rivian in terms of news coverage and sentiment?",
+    "brand": "Tesla",
+    "competitors": ["Rivian"],
+    "expected_behavior": "Should retrieve content for both brands separately and compare volume and sentiment",
+    "must_contain_concepts": ["Tesla", "Rivian", "sentiment", "coverage"],
+    "must_not_contain": ["I don't know", "no data"]
+  },
+  {
+    "id": "comp-002",
+    "query": "Who is winning the narrative battle between Tesla and Rivian?",
+    "brand": "Tesla",
+    "competitors": ["Rivian"],
+    "expected_behavior": "Should compare both brands and give a clear winner with evidence",
+    "must_contain_concepts": ["Tesla", "Rivian"],
+    "must_not_contain": ["cannot determine", "insufficient data"]
+  },
+  {
+    "id": "groundedness-001",
+    "query": "What specific legal issues is Tesla facing?",
+    "brand": "Tesla",
+    "competitors": [],
+    "expected_behavior": "Should cite specific cases from retrieved content, not generic knowledge",
+    "must_contain_concepts": ["lawsuit", "settlement", "legal"],
+    "must_not_contain": ["generally speaking", "typically", "in general"]
+  },
+  {
+    "id": "groundedness-002",
+    "query": "Tell me about Tesla battery problems",
+    "brand": "Tesla",
+    "competitors": [],
+    "expected_behavior": "Should find battery-related content and cite real sources",
+    "must_contain_concepts": ["battery"],
+    "must_not_contain": ["I don't have information"]
+  }
+]

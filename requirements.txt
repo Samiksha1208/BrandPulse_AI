@@ -1,24 +1,44 @@
-# Core orchestration
-langchain==0.3.*
-langgraph==0.4.*
-langchain-google-genai==2.0.*
-langchain-elasticsearch==0.3.*
+# Core AI & LangChain
+langchain==0.3.30
+langchain-core==1.4.8
+langchain-google-genai==4.2.6
+langchain-text-splitters==0.3.11
+langgraph==1.2.7
+langgraph-checkpoint==4.1.1
+langgraph-checkpoint-postgres==3.1.0
+langgraph-prebuilt==1.1.0
+langgraph-sdk==0.4.2
+langgraph-supervisor==0.0.31
+langsmith==0.9.3
+google-genai==2.10.0
 
-# API & serving
-fastapi==0.115.*
-uvicorn[standard]==0.32.*
-pydantic==2.9.*
+# ElasticSearch
+elasticsearch==8.15.1
+elastic-transport==8.17.1
 
-# Data layer
-elasticsearch==8.15.*
-redis==5.1.*
+# Postgres
+psycopg==3.3.4
+psycopg-binary==3.3.4
+psycopg-pool==3.3.1
 
-# Ingestion
+# Redis
+upstash-redis==1.7.0
+
+# Data sources
 newsapi-python==0.2.7
-praw==7.8.*
-feedparser==6.0.*
-apscheduler==3.10.*
+praw==7.8.2
+feedparser==6.0.12
+
+# Web framework
+fastapi==0.115.14
+uvicorn==0.32.1
 
 # Utilities
-python-dotenv==1.0.*
-tenacity==9.0.*
+python-dotenv==1.0.1
+pydantic==2.13.4
+httpx==0.27.*
+requests==2.34.2
+
+# Testing
+pytest==8.3.*
+pytest-asyncio==0.24.*
