@@ -3,7 +3,8 @@ import io
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 import json
 import os
-from datetime import datetime
+import time
+from datetime import datetime, timezone
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -100,13 +101,16 @@ def run_evaluation():
             print(f"  ❌ ERROR: {e}")
             results.append({"id": case["id"], "status": "ERROR", "error": str(e)})
 
+        print("  [Waiting 30s to respect free-tier API rate limits...]")
+        time.sleep(30)
+
     pass_rate = (passed / total) * 100
     print(f"\n{'='*60}")
     print(f"RESULTS: {passed}/{total} passed ({pass_rate:.0f}% pass rate)")
     print(f"{'='*60}")
 
     report = {
-        "timestamp": datetime.utcnow().isoformat(),
+        "timestamp": datetime.now(timezone.utc).isoformat(),
         "total": total,
         "passed": passed,
         "pass_rate": f"{pass_rate:.0f}%",
