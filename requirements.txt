@@ -1,6 +1,6 @@
 # Core AI & LangChain
 langchain==0.3.30
-langchain-core==1.4.8
+langchain-core>=0.3.85
 langchain-google-genai==4.2.6
 langchain-text-splitters==0.3.11
 langgraph==1.2.7
