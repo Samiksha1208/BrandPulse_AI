@@ -1,8 +1,8 @@
 # Core AI & LangChain
-langchain==0.3.30
-langchain-core>=0.3.85
-langchain-google-genai==4.2.6
-langchain-text-splitters==0.3.11
+langchain
+langchain-core
+langchain-google-genai
+langchain-text-splitters
 langgraph==1.2.7
 langgraph-checkpoint==4.1.1
 langgraph-checkpoint-postgres==3.1.0
